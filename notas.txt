@@ -1,0 +1,9 @@
+# correr una app llamada hello
+flask --app hello run
+
+# agregar --host=0.0.0.0 si quiero que se ejecute en mi red.
+
+# agregar --debug para que se ejecute en tiempo real lo que voy modificando (modo depuracion)
+
+# comando completo
+flask --app hello run --host=0.0.0.0 --debug
