@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import request, jsonify
 # from flask import request
 # from markupsafe import escape
 # from flask import url_for
@@ -60,3 +61,21 @@ app = Flask(__name__)
 @app.route("/hello/<name>")
 def hello(name=None):
   return render_template("hello.html", person=name)
+
+# @app.route("/login", methods=["POST", "GET"])
+# def login():
+#   if request.method == "POST":
+#     return request.form["username"]
+#   else:
+#     return f"<p>No hay nada en el body</p>"
+
+# útil para revisar a posterior
+# @app.route("/login", methods=["POST", "GET"])
+# def login():
+#   if request.method == "POST":
+#     data = request.get_json()
+#     if data and "username" in data:
+#       return jsonify({"username": data["username"]})
+#     return jsonify({"error": "No se encontró username en el JSON"}), 400
+#   else:
+#     return jsonify({"message": "No hay nada en el body"}), 400
